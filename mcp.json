@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "qmoosa-agentpay": {
+      "tools": [
+        {
+          "name": "negotiate_agent_contract",
+          "description": "Performs verifiable agent-to-agent contract negotiation under TUM policy rules",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "service_name": {
+                "type": "string"
+              },
+              "max_price": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "service_name",
+              "max_price"
+            ]
+          }
+        },
+        {
+          "name": "enforce_spend_policy",
+          "description": "Verifies daily budget invariants against API3 oracle feeds",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "agent_address": {
+                "type": "string"
+              },
+              "requested_amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "agent_address",
+              "requested_amount"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
